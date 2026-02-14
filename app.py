@@ -520,7 +520,7 @@ if run_btn or "result" in st.session_state:
             pivot["Annual"] = pivot.sum(axis=1)
             st.markdown("#### Annual Summary")
             st.dataframe(
-                pivot.style.format("{:.2f}").background_gradient(cmap="RdYlGn", axis=None),
+                pivot.style.format("{:.2f}"),
                 width="stretch",
             )
         else:
